@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Coupe Gasoline Calculation</title>
+    <link rel="stylesheet" href="first-js.css">
+  </head>
+  <body>
+
+    <h1>Calculate the summer and winter gasoline cost</h1>
+    <p id="costinsummer"></p>
+    <p id="costinwinter"></p>
+
+    <p id="Cog:"></p>
+    <p id="Aoc:"></p>
+    <p id="Tog:"></p>
+
+    <p>
+<button type="button" name="button1" oneclick = "costinsummer(2)" >Coupe cost in summer</button>
+<button type="button" name="button2" oneclick = "costinwinter(4)">Coupe cost in Winter</button>
+
+    </p>
+    <br>
+    <br>
+
+    <h1>modlesofcoupe</h1>
+    <p id="modlesofcoupe"></p>
+    <button type="button" name="button1" onclick="coupe">coupe modles</button>
+    <br>
+
+
+    <h1>coupe s5 perform</h1>
+    <button onclick="s5 perform">S5</button>
+    <p id="S5"></p>
+<p>The reason that I only talk about S5 is that I do not have a chance to drive other kinds of coupe.</p>
+
+<h1>brands of coupe</h1>
+<p id = "Brand"></p>
+<button type="button" onclick="Brand">Brand of Coupe</button>
+
+    <script src="myscript.js"></script>
+    <script>
+    var costofgas = 6782.4
+    var averageofcost = 141.3
+    var timeofgas = gostofgas/averageofcost
+    document.getElementById("Cog").innerHTML = "Totally Cost of Gas: " + costofgass;
+    document.getElementById("Aoc").innerHTML = "Average of Cost: " + averageofcost;
+    document.getElementById("Tog").innerHTML = "Times of gas: " + timeofgas;
+
+    function seasoncost(sc)
+    { let totalcost = 6782.4
+      let summerunitprice = 2.99;
+      let winterunitprice = 3.99;
+      let tankofgallon = 45;
+      let TM ;
+    if(sc == 2)
+    {
+      TM = totalcost/summerunitprice/tankofgallon;
+      costinsummer=3229.2
+    }
+    else
+    {
+      TOT = totalcost/winterunitprice/tankofgallon;
+      costinwinter = 3553.2
+    }
+    document.getElementById("totalcost").innerHTML = "Total Cost: " + totalcost;
+    document.getElementById("costinsummer").innerHTML = "Cost in summer: " + costinsummer;
+    document.getElementById("costinwinter").innerHTML = "Cost in summer: " + costinwinter;
+
+    function modlesofcoupe()
+    {
+      let modlesofcoupe = ["s5", "m4", "C63", "LP700", "LP720", "911"];
+      let text = "Coupe";
+      let j;
+      for (j = 0; j < modlesofcoupe.length; j++)
+      {
+        text= text + modlesofcoupe[j];
+      }
+      document.getElementById("modlesofcoupe").innerHTML = text;
+    }
+
+var s5 = {Accelaration:"5 points", Comfort:"5 points", Appearance:"5 points", Overall:"5 points"};
+
+function  S5performance()
+{
+  let text = "performance";
+  let a;
+  for (a in s5)
+  {
+    text=a;
+  }
+  document.getElementById("S5").innerHTML = a;
+}
+
+    function brandofcoupe()
+    {
+      let brandofcoupe = ["audi", "bmw", "benz", "lamborghini", "maclarn", "porche"];
+      let text = "Brand";
+      let k;
+      for (k = 0; j < brandofcoupe.length; k++)
+      {
+        text= text + brandofcoupe[k];
+      }
+      document.getElementById("brandofcoule").innerHTML = text;
+    }
+
+    let text = "brand";
+    let i = 1;
+      while (i <=6)
+      {
+        text=text+ "Brand" + i
+        i++;
+      }
+      document.getElementById("Brands").innerHTML = text;
+
+}
+
+    </script>
+
+</body>
+</html>
